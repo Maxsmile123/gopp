@@ -1,2 +1,2 @@
-# gopp - concurency library for C++. Little Go inside of C++.
+# gopp - concurency library for C++.
 
