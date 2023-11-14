@@ -1,2 +1,1 @@
-# gopp - concurency library for C++.
-
+# gopp - concurency library for C++
