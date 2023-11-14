@@ -1,10 +1,8 @@
+#include "gopp/thread/mutex/mutex.hpp"
 
+namespace gopp::thread::stdlike {
 
-
-namespace gopp::thread{
-namespace std{
-
- void Lock() {
+ void Mutex::Lock() {
     auto free_state = static_cast<uint32_t>(MutexStates::Free);
     if(phase_.compare_exchange_strong(free_state, MutexStates::LockedWithoutContention)) {
       return;
@@ -17,16 +15,15 @@ namespace std{
     }
   }
 
-  bool TryLock() {
+  bool Mutex::TryLock() {
     auto free_state = static_cast<uint32_t>(MutexStates::Free);
     if(phase_.compare_exchange_strong(free_state, MutexStates::LockedWithoutContention)) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 
-  void Unlock() {
+  void Mutex::Unlock() {
     auto key = gopp::thread::futex::PrepareWake(phase_);
     if (phase_.exchange(MutexStates::Free) == LockedWithContention) {
       gopp::thread::futex::WakeOne(key);
@@ -36,19 +33,18 @@ namespace std{
   // BasicLockable
   // https://en.cppreference.com/w/cpp/named_req/BasicLockable
 
-  void lock() {  // NOLINT
+  void Mutex::lock() {  // NOLINT
     Lock();
   }
 
-  void unlock() {  // NOLINT
+  void Mutex::unlock() {  // NOLINT
     Unlock();
   }
 
-  bool try_lock() { // NOLINT
+  bool Mutex::try_lock() { // NOLINT
     return TryLock();
   }
 
 
 
-}
-}
+} // namespace gopp::thread::std

@@ -5,10 +5,10 @@
 
 
 int main() {
-    const int kIterations = 128;
+    const int kIterations = 128000;
 
     int a = 0;
-    gopp::thread::std::Mutex mutex;
+    gopp::thread::stdlike::Mutex mutex;
 
     std::thread t1([&](){
         mutex.lock();
@@ -24,6 +24,7 @@ int main() {
         }
         mutex.unlock();
     });
-
+    t1.join();
+    t2.join();
     assert(a == 2 * kIterations);
 }
