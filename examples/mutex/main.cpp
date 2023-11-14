@@ -2,7 +2,7 @@
 
 #include <thread>
 #include <cassert>
-
+#include <mutex>
 
 int main() {
     const int kIterations = 128000;
@@ -18,11 +18,10 @@ int main() {
         mutex.unlock();
     });
     std::thread t2([&](){
-        mutex.lock();
+        std::lock_guard lock(mutex);
         for (int i = 0; i < kIterations; ++i) {
             ++a;
         }
-        mutex.unlock();
     });
     t1.join();
     t2.join();
