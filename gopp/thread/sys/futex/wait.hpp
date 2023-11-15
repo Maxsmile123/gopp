@@ -1,6 +1,6 @@
 #pragma once
 
-#include <gopp/thread/futex/system/wait.hpp>
+#include <gopp/thread/sys/futex/system/wait.hpp>
 
 #include <atomic>
 #include <chrono>

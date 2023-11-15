@@ -6,8 +6,11 @@
 - [ ] (Spinlock)
 - [ ] Semaphore
 - [ ] Barrier
-- [ ] CondVar
+- [x] CondVar
 - [ ] WaitGroup
+
+## Tests
+- [ ] Add tests for all parts
 
 ## Async
 - [ ] Future

@@ -15,7 +15,11 @@ namespace gopp::thread::stdlike {
 
     while(phase_.exchange(MutexStates::LockedWithContention, std::memory_order_release) != MutexStates::Free) {
         while(phase_.load(std::memory_order_acquire) != MutexStates::Free) {
-            gopp::thread::futex::Wait(phase_, MutexStates::LockedWithContention);
+            gopp::thread::futex::Wait(
+                phase_, 
+                MutexStates::LockedWithContention, 
+                std::memory_order_acquire
+            );
         }
     }
   }

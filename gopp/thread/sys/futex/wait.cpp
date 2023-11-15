@@ -1,4 +1,4 @@
-#include <gopp/thread/futex/wait.hpp>
+#include <gopp/thread/sys/futex/wait.hpp>
 
 
 namespace gopp::thread{

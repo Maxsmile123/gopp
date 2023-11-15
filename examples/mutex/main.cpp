@@ -2,7 +2,6 @@
 
 #include <thread>
 #include <cassert>
-#include <mutex>
 
 int main() {
     const int kIterations = 128000;
