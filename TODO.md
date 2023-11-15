@@ -18,12 +18,12 @@
 - [ ] Stackful Coroutines
 
 ## Fibers
-- [ ] - Yield
-- [ ] - SleepFor
-- [ ] - lockfree sync for fibers(mutex, waitgroup and etc.)
+- [ ] Yield
+- [ ] SleepFor
+- [ ] lockfree sync for fibers(mutex, waitgroup and etc.)
 
 ## Exectutors
-- [ ] - ThreadPool
-- [ ] - Strand
-- [ ] - Manual
-- [ ] - Go scheduler for fibers
+- [ ] ThreadPool
+- [ ] Strand
+- [ ] Manual
+- [ ] Go scheduler for fibers
