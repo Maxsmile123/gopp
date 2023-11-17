@@ -9,7 +9,7 @@
 // Using this article: https://dept-info.labri.fr/~denis/Enseignement/2008-IR/Articles/01-futex.pdf
 
 
-namespace gopp::thread::stdlike {
+namespace gopp::thread::sync {
 
 class Mutex {
 private:
@@ -40,4 +40,4 @@ public:
   std::atomic<uint32_t> phase_{0};
 };
 
-}  // namespace gopp::thread::stdlike
+}  // namespace gopp::thread::sync

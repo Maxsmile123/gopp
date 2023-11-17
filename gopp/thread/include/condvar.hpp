@@ -5,7 +5,7 @@
 #include <atomic>
 #include <cstdint>
 
-namespace gopp::thread::stdlike {
+namespace gopp::thread::sync {
 
 class CondVar {
  public:
@@ -32,4 +32,4 @@ class CondVar {
  private:
   std::atomic<uint32_t> counter_{0};
 };
-} // namespace gopp::thread::stdlike
+} // namespace gopp::thread::sync

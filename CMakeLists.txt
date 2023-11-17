@@ -10,6 +10,9 @@ include(cmake/PrintDiagnostics.cmake)
 
 option(GOPP_TESTS "Build GOPP tests" OFF)
 option(GOPP_EXAMPLES "Build GOPP examples" ON)
+option(GOPP_DEVELOPER "Run GOPP in developer mode" OFF)
+# option(TSAN "Run thread sanitizer" OFF)
+option(ASAN "Run address sanitizer" OFF)
 
 #add_subdirectory(third_party)
 

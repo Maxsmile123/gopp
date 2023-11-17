@@ -1,6 +1,6 @@
-#include "gopp/thread/mutex/mutex.hpp"
+#include "gopp/thread/include/mutex.hpp"
 
-namespace gopp::thread::stdlike {
+namespace gopp::thread::sync {
 
  void Mutex::Lock() {
     auto free_state = static_cast<uint32_t>(MutexStates::Free);
@@ -61,4 +61,4 @@ namespace gopp::thread::stdlike {
 
 
 
-} // namespace gopp::thread::std
+} // namespace gopp::thread::sync

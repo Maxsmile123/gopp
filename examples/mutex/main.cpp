@@ -1,4 +1,4 @@
-#include <gopp/thread/mutex/mutex.hpp>
+#include <gopp/thread/include/mutex.hpp>
 
 #include <thread>
 #include <cassert>
@@ -7,7 +7,7 @@ int main() {
     const int kIterations = 128000;
 
     int a = 0;
-    gopp::thread::stdlike::Mutex mutex;
+    gopp::thread::sync::Mutex mutex;
 
     std::thread t1([&](){
         mutex.lock();

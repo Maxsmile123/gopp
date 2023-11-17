@@ -1,5 +1,5 @@
-#include <gopp/thread/mutex/mutex.hpp>
-#include <gopp/thread/condvar/condvar.hpp>
+#include <gopp/thread/include/mutex.hpp>
+#include <gopp/thread/include/condvar.hpp>
 
 #include <thread>
 #include <cassert>
@@ -30,8 +30,8 @@ class Event {
 
    private:
     bool set_{false};
-    gopp::thread::stdlike::Mutex mutex_;
-    gopp::thread::stdlike::CondVar set_cond_;
+    gopp::thread::sync::Mutex mutex_;
+    gopp::thread::sync::CondVar set_cond_;
   };
 
 int main() {

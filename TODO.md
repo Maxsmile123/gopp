@@ -3,8 +3,7 @@
 ## Threads sync
 
 - [x] Mutex
-- [ ] (Spinlock)
-- [ ] Semaphore
+- [x] Semaphore
 - [ ] Barrier
 - [x] CondVar
 - [ ] WaitGroup
