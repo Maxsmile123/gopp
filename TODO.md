@@ -4,7 +4,7 @@
 
 - [x] Mutex
 - [x] Semaphore
-- [ ] Barrier
+- [x] Barrier
 - [x] CondVar
 - [ ] WaitGroup
 

@@ -26,15 +26,12 @@ namespace gopp::thread::sync {
 
   bool Mutex::TryLock() {
     auto free_state = static_cast<uint32_t>(MutexStates::Free);
-    if(phase_.compare_exchange_strong(
+    return phase_.compare_exchange_strong(
         free_state, 
         MutexStates::LockedWithoutContention,
         std::memory_order_release,
         std::memory_order_relaxed
-    )) {
-      return true;
-    }
-    return false;
+    );
   }
 
   void Mutex::Unlock() {
