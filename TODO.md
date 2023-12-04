@@ -6,7 +6,7 @@
 - [x] Semaphore
 - [x] Barrier
 - [x] CondVar
-- [ ] WaitGroup
+- [x] WaitGroup
 
 ## Tests
 - [ ] Add tests for all parts
