@@ -12,7 +12,7 @@
 - [ ] Add tests for all parts
 
 ## Async
-- [ ] Future
+- [x] Future
 - [ ] Future in Functional style (Monad)
 - [ ] Stackful Coroutines
 

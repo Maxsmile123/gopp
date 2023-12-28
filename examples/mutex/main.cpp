@@ -1,4 +1,5 @@
 #include <gopp/thread/include/mutex.hpp>
+#include <gopp/async/include/future.hpp>
 
 #include <thread>
 #include <cassert>
@@ -9,7 +10,7 @@ int main() {
     int a = 0;
     gopp::thread::sync::Mutex mutex;
 
-    std::thread t1([&](){
+    std::thread t1([&]() {
         mutex.lock();
         for (int i = 0; i < kIterations; ++i) {
             ++a;
