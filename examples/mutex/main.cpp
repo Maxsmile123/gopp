@@ -1,5 +1,4 @@
 #include <gopp/thread/include/mutex.hpp>
-#include <gopp/async/include/future.hpp>
 
 #include <thread>
 #include <cassert>
