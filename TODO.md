@@ -22,7 +22,7 @@
 - [ ] lockfree sync for fibers(mutex, waitgroup and etc.)
 
 ## Exectutors
-- [ ] ThreadPool
+- [x] ThreadPool
 - [ ] Strand
 - [ ] Manual
 - [ ] Go scheduler for fibers
